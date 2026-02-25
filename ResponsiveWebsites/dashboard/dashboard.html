@@ -5,17 +5,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="..." crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./dashboard.css">
 
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script type="text/javascript" src="./chart.js"></script>
+
 </head>
 
 <body>
+    <header>
+        <h1>Management Dashboard</h1>
+        <div class="filter">
+            <div class="date-range">
+                <p class="filter-name">Auto date range</p>
+                <div class="select-container">
+                    <i class="far fa-calendar-alt" aria-hidden="true"></i>
+                    <select class="select" name="Select" id="selectDateRange">
+                        <option value="select">Select Date Range</option>
+                        <option value="week">This Week</option>
+                        <option value="month">This Month</option>
+                        <option value="year">This Year</option>
+                    </select>
+                </div>
+            </div>
+            <div class="services">
+                <p class="filter-name">Services</p>
+                <select name="Services" id="selectServices">
+                    <option value="all">All</option>
+                    <option value="dunno">Dunno</option>
+                </select>
+            </div>
+            <div class="posts">
+                <p class="filter-name">Posts</p>
+                <select name="Posts" id="selectPosts">
+                    <option value="all">All</option>
+                    <option value="dunno">Dunno</option>
+                </select>
+            </div>
+        </div>
+    </header>
     <main>
         <div class="charts">
-            <div id="columnchart_values"></div>
-            <div id="columnchart2_values"></div>
+            <div class="chart-container">
+                <div id="columnchart_values"></div>
+            </div>
+            <div class="chart-container">
+                <div id="columnchart2_values"></div>
+            </div>
         </div>
         <div class="status-wrapper">
             <div class="revenue">
@@ -44,6 +83,11 @@
             </div>
         </div>
     </main>
-</body>
+    <section>
+        <div class="curve-chart">
+            <canvas id="curve_chart"></canvas>
+        </div>
+    </section>
 
+</body>
 </html>
