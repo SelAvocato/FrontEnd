@@ -1,37 +1,58 @@
-* {
-    box-sizing: border-box;
+*{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
-body {
+body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 1rem;
+    align-items: center;
+    background-color: lightblue;
+    padding: 2rem;
     font-family: sans-serif;
 }
 
-main>h1,
-section>h2,
-.daily-container>p,
-.weekly-container>p {
-    text-align: center;
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+
+    height: 90vh;
+    width: 70vw;
+    
+    background-color: white;
+    border-radius: 15px;
     margin-bottom: 1rem;
 }
 
-.challenges-wrapper {
+h1{
+    margin-block: 2rem;
+    letter-spacing: 1px;
+}
+
+.challenges-container{
     display: flex;
-    justify-content: center;
-    gap: 1rem;
-    width: 90vw;
+    flex-direction: column;
+    align-items: center;
+
+    width: 50vw;
+}
+
+h2{
+    margin-bottom: 1rem;
+}
+
+.challenges-wrapper{
+    display: flex;
+    justify-content: space-between;
+    width: 50vw;
     text-align: center;
 }
 
-.weekly-container {
-    flex: 1;
-}
-
-.daily-container {
-    flex: 1;
+.weekly-header, .daily-header{
+    font-weight: bold;
+    font-size: 15px;
 }
