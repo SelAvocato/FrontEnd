@@ -1,0 +1,89 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./music-player.css">
+    <title>Music Player</title>
+</head>
+
+<body>
+    <main>
+        <header>
+            <i class="fa fa-bars" aria-hidden="true"></i>
+            <p>PLAYING NOW</p>
+            <i class="fa fa-bookmark-o" id="bookmark" aria-hidden="true"></i>
+        </header>
+
+        <div class="title">
+            <p class="song-title" id="songTitle">Someone Lived This</p>
+            <p class="author">- Hans Zimmer -</p>
+        </div>
+
+        <div class="cover-image">
+            <img src="https://static.wikia.nocookie.net/bladerunner/images/e/e5/BR2049soundtrack.jpg/revision/latest?cb=20200430041159" alt="Blade Runner 2049 poster">
+        </div>
+
+        <div class="bar">
+            <div class="duration" id="duration">
+                <div class="duration-span" id="progress"></div>
+            </div>
+            <div class="time">
+                <p class="p-duration-span" id="currentSongProgress">3:47</p>
+                <p class="p-duration" id="currentSongDuration">5:35</p>
+            </div>
+        </div>
+
+        <div class="actions">
+            <i class="fa fa-refresh" aria-hidden="true"></i>
+            <i class="fa fa-step-backward" aria-hidden="true"></i>
+            <i class="fa fa-play-circle-o" id="playPauseBtn" aria-hidden="true"></i>
+            <i class="fa fa-step-forward" aria-hidden="true"></i>
+            <i class="fa fa-random" aria-hidden="true"></i>
+        </div>
+
+        <div class="playlist" id="playlist">
+            <div class="song default">
+                <div class="bullet">
+                    <i class="fa fa-circle" aria-hidden="true"></i>
+                </div>
+                <div class="detail">
+                    <p class="song-title">Sapper's Tree</p>
+                    <p class="duration">3:37</p>
+                </div>
+            </div>
+            <div class="song playing" id="playing">
+                <div class="bullet">
+                    <i class="fa fa-circle" aria-hidden="true"></i>
+                </div>
+                <div class="detail">
+                    <p class="song-title">Someone Lived This</p>
+                    <p class="duration">5:35</p>
+                </div>
+            </div>
+            <div class="song default">
+                <div class="bullet">
+                    <i class="fa fa-circle" aria-hidden="true"></i>
+                </div>
+                <div class="detail">
+                    <p class="song-title">Summer Wind</p>
+                    <p class="duration">2:54</p>
+                </div>
+            </div>
+            <div class="song default">
+                <div class="bullet">
+                    <i class="fa fa-circle" aria-hidden="true"></i>
+                </div>
+                <div class="detail">
+                    <p class="song-title">Orphanage</p>
+                    <p class="duration">1:13</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="./music-player.js"></script>
+</body>
+
+</html>
