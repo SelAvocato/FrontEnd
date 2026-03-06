@@ -1,7 +1,7 @@
 aside {
     position: relative;
 
-    background-color: black;
+    background-color: #131925;
     padding: 1.5rem 1.2rem;
 
     width: 250px;
@@ -36,6 +36,8 @@ aside {
 
     width: 95%;
     margin-bottom: 1rem;
+
+    cursor: pointer;
 }
 
 .dashboard-dropdown span{
@@ -46,7 +48,7 @@ aside {
     font-size: 13px;
     color: gray;
 
-    cursor: pointer;
+    transition: all 0.25s ease;
 }
 
 ul{
@@ -55,11 +57,28 @@ ul{
     justify-content: start;
     align-items: start;
     gap: 1rem;
-    margin-left: 2rem;
+    margin-left: 1rem;
+
+    max-height: 130px;
+    
+    overflow: hidden;
+    list-style-position: inside;
+
+    transition: max-height 0.25s ease;
+}
+
+.close{
+    max-height: 0px;
+}
+
+.rotate{
+    rotate: 180deg;
 }
 
 li{
     color: gray;
+
+    cursor: pointer;
 }
 
 .active{
@@ -77,6 +96,8 @@ li{
 
     margin-left: 0.5rem;
     margin-bottom: 1.5rem;
+    
+    cursor: pointer;
 }
 
 .profile-image-container{

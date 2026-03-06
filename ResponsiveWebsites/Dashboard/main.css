@@ -22,6 +22,8 @@ main{
 #datepicker{
     border: none;
     outline: none;
+    
+    cursor: pointer;
 }
 
 .fa-calendar{
