@@ -1,0 +1,23 @@
+@media (max-width: 768px) {
+  body {
+    grid-template-columns: auto 1fr auto;
+  }
+
+  aside {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  main {
+    width: 100vw;
+  }
+
+  .components {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
+  }
+
+}

@@ -8,6 +8,29 @@ header {
     border-bottom: 1px solid lightgray;
 }
 
+.header-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.hamburger-menu{
+    display: none;
+    cursor: pointer;
+}
+
+.line{
+    height: 3px;
+    width: 18px;
+
+    background-color: rgb(136, 134, 134);
+}
+
+.line:nth-child(2){
+    margin-block: 3px;
+}
+
 .span-dashboard, .searchbox i, .fa-bell {
     color: gray;
 }

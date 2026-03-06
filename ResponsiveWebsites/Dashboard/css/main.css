@@ -31,14 +31,14 @@ main{
 }
 
 .performance-container{
-    width: 750px;
+    max-width: 750px;
 
     margin-bottom: 1.3rem;
 }
 
 .performance-wrapper{
     display: grid;
-    grid-template-columns:repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(min(230px,100%), 1fr));
     gap: 1rem;
 }
 

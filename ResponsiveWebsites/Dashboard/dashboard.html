@@ -14,17 +14,25 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <link rel="stylesheet" href="./dashboard.css">
-    <link rel="stylesheet" href="./header.css">
-    <link rel="stylesheet" href="./aside.css">
-    <link rel="stylesheet" href="./main.css">
-    <link rel="stylesheet" href="./components.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/aside.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/components.css">
+    <link rel="stylesheet" href="./css/media.css">
     <title>Dashboard</title>
 </head>
 
 <body>
     <header>
         <div class="header-title">
-            <span class="span-dashboard">Dashboard / </span><span class="span-overview">Overview</span>
+            <div class="hamburger-menu">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <div>
+                <span class="span-dashboard">Dashboard / </span><span class="span-overview">Overview</span>
+            </div>
         </div>
         <div class="header-actions">
             <div class="searchbox">
@@ -62,7 +70,7 @@
                 <img src="./images/profile-picture.png" alt="Profile Picture">
             </div>
             <div class="details">
-                <p class="name">Vlad Cristea</p>
+                <p class="name">Braylle Soberano</p>
                 <p class="role">Administator</p>
             </div>
         </div>
@@ -215,8 +223,8 @@
     <script src="https://cdn.jsdelivr.net/npm/lightpick@1.6.2/lightpick.js"></script>
 
     <script src="./dashboard.js"></script>
-    <script src="./daterange.js"></script>
-    <script src="./chart.js"></script>
+    <script src="./js/daterange.js"></script>
+    <script src="./js/chart.js"></script>
 </body>
 
 </html>

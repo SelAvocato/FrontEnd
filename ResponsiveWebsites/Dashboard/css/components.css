@@ -10,7 +10,7 @@
 }
 
 .components>div {
-    width: 525px;
+    max-width: 525px;
     height: 400px;
 
     border: 1px solid lightgray;
