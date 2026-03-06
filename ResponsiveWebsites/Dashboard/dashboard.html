@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="./dashboard.css">
+    <link rel="stylesheet" href="./header.css">
+    <link rel="stylesheet" href="./aside.css">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./components.css">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-title">
+            <span class="span-dashboard">Dashboard / </span><span class="span-overview">Overview</span>
+        </div>
+        <div class="header-actions">
+            <div class="searchbox">
+                <input type="text" placeholder="Search anything ...">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="notif-bell">
+                <i class="fa-solid fa-bell"></i>
+                <div class="red-dot"></div>
+            </div>
+        </div>
+    </header>
+    <aside>
+        <div class="aside-header">
+            <p class="aside-title">Dashboard UI</p>
+        </div>
+        <div class="menu">
+            <p>MENU</p>
+            <div class="dashboard-dropdown">
+                <div>
+                    <i class="fa-solid fa-cubes"></i>
+                    <span>Dashboard</span>
+                </div>
+                <i class="fa-solid fa-angle-up"></i>
+            </div>
+            <ul>
+                <li class="active">Overview</li>
+                <li>Sales</li>
+                <li>Products</li>
+                <li>Traffic</li>
+            </ul>
+        </div>
+        <div class="profile-container">
+            <div class="profile-image-container">
+                <img src="./images/profile-picture.png" alt="Profile Picture">
+            </div>
+            <div class="details">
+                <p class="name">Vlad Cristea</p>
+                <p class="role">Administator</p>
+            </div>
+        </div>
+    </aside>
+    <main>
+        <div class="main-header">
+            <div class="greeting">
+                <p><strong>Hey Adam!</strong> It's great to see you again.</p>
+            </div>
+            <div class="date-selector">
+                <input type="text" id="datepicker" autocomplete="off" placeholder="Select Date Range" />
+                <i class="fa-solid fa-calendar"></i>
+            </div>
+        </div>
+        <div class="performance-container">
+            <div class="performance-wrapper">
+                <div class="performance-data-container total-earnings">
+                    <p class="total-earnings-header">Total Earnings</p>
+                    <div class="performance-data">
+                        <p class="earnings">$245.59</p>
+                        <div class="performance-sign">
+                            <span class="percentage-change">+53%</span>
+                            <i class="fa-solid fa-arrow-trend-up"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="performance-data-container total-revenue">
+                    <p class="total-revenue-header">Total Revenue</p>
+                    <div class="performance-data">
+                        <p class="revenue">$603</p>
+                        <div class="performance-sign">
+                            <span class="percentage-change">+34%</span>
+                            <i class="fa-solid fa-arrow-trend-up"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="performance-data-container product-sold">
+                    <p class="product-sold-header">Total Earnings</p>
+                    <div class="performance-data">
+                        <p class="sold">35</p>
+                        <div class="performance-sign">
+                            <span class="percentage-change">+40%</span>
+                            <i class="fa-solid fa-arrow-trend-up"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="linechart-container">
+            <canvas id="lineChart"></canvas>
+        </div>
+    </main>
+    <section class="components">
+        <div class="recent-sales-container">
+            <p class="recent-sales-header">Recent Sales</p>
+            <table class="recent-sales-table">
+                <tr>
+                    <th>DATE SOLD</th>
+                    <th>PRODUCT</th>
+                    <th>CUSTOMER</th>
+                    <th>PRICE</th>
+                    <th>EARNING</th>
+                </tr>
+                <tr>
+                    <td>Aug 7</td>
+                    <td><i class="fa-solid fa-file"></i>CSS Ninja e-Book</td>
+                    <td>David Kelly</td>
+                    <td>$16</td>
+                    <td>$11,2</td>
+                </tr>
+                <tr>
+                    <td>Aug 7</td>
+                    <td><i class="fa-solid fa-file-video"></i>Video JS Course</td>
+                    <td>Jessica Harper</td>
+                    <td>$32</td>
+                    <td>$22,4</td>
+                </tr>
+                <tr>
+                    <td>Aug 6</td>
+                    <td><i class="fa-solid fa-file"></i>CSS Ninja e-Book</td>
+                    <td>Ashley Amber</td>
+                    <td>$16</td>
+                    <td>$11,2</td>
+                </tr>
+                <tr>
+                    <td>Aug 5</td>
+                    <td><i class="fa-solid fa-file-video"></i>Video JS Course</td>
+                    <td>Vlad Cristea</td>
+                    <td>$32</td>
+                    <td>$22,4</td>
+                </tr>
+                <tr>
+                    <td>Aug 5</td>
+                    <td><i class="fa-solid fa-file"></i>CSS Ninja e-Book</td>
+                    <td>John Wesley</td>
+                    <td>$16</td>
+                    <td>$11,2</td>
+                </tr>
+                <tr>
+                    <td>Aug 3</td>
+                    <td><i class="fa-solid fa-file"></i>CSS Ninja e-Book</td>
+                    <td>Patrick Lee</td>
+                    <td>$16</td>
+                    <td>$11,2</td>
+                </tr>
+            </table>
+        </div>
+        <div class="traffic-by-country-container">
+            <p class="traffic-header">Traffic by country</p>
+            <div class="traffic-data-container">
+                <div class="donutchart-container">
+                    <canvas id="donutChart"></canvas>
+                </div>
+                <table class="traffic-table">
+                    <tr>
+                        <th>CUSTOMER</th>
+                        <th style="text-align: end;">USERS</th>
+                    </tr>
+                    <tr>
+                        <td><i class="fa-solid fa-circle us"></i> United States</td>
+                        <td style="text-align: end;">6,126</td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa-solid fa-circle rom"></i> Romania</td>
+                        <td style="text-align: end;">1,531</td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa-solid fa-circle ger"></i> Germany</td>
+                        <td style="text-align: end;">1,158</td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa-solid fa-circle id"></i> India</td>
+                        <td style="text-align: end;">985</td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa-solid fa-circle uk"></i> United Kingdom</td>
+                        <td style="text-align: end;">543</td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa-solid fa-circle other"></i> Other</td>
+                        <td style="text-align: end;">12,654</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightpick@1.6.2/css/lightpick.css">
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.4/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightpick@1.6.2/lightpick.js"></script>
+
+    <script src="./dashboard.js"></script>
+    <script src="./daterange.js"></script>
+    <script src="./chart.js"></script>
+</body>
+
+</html>

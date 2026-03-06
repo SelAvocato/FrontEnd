@@ -1,0 +1,56 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 16px;
+    padding: 0.5rem 1.3rem;
+    border-bottom: 1px solid lightgray;
+}
+
+.span-dashboard, .searchbox i, .fa-bell {
+    color: gray;
+}
+
+.header-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 1rem;
+}
+
+.searchbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid lightgray;
+    border-radius: 5px;
+
+    padding: 0.5rem;
+}
+
+.searchbox input {
+    outline: none;
+    border: none;
+}
+
+.notif-bell{
+    position: relative;
+
+    cursor: pointer;
+}
+
+.red-dot{
+    position: absolute;
+    top: 0;
+    right: -3px;
+
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background-color: #FE2712;
+}
