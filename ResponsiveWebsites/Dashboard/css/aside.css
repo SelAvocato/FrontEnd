@@ -1,5 +1,5 @@
 aside {
-    position: relative;
+    position: fixed;
 
     background-color: #131925;
     padding: 1.5rem 1.2rem;
@@ -7,9 +7,25 @@ aside {
     width: 250px;
     height: 100vh;
     
-    position: fixed;
     color: white;
     font-size: 16px;
+}
+
+
+.x{
+    display: none;
+    position: absolute;
+
+    top: 5px;
+    right: 10px;
+
+    background-color: #131925;
+    color: rgba(255, 255, 255, 0.678);
+
+    outline: none;
+    border: none;
+
+    font-size: 15px;
 }
 
 .aside-title{
@@ -17,7 +33,7 @@ aside {
     font-size: 20px;
     font-weight: bold;
 
-    margin-bottom: 4rem;
+    margin-block: 2rem 4rem;
 }
 
 .menu p {
@@ -64,7 +80,7 @@ ul{
     overflow: hidden;
     list-style-position: inside;
 
-    transition: max-height 0.25s ease;
+    transition: all 0.25s ease;
 }
 
 .close{

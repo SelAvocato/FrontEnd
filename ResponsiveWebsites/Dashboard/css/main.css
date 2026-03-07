@@ -1,48 +1,55 @@
-main{
+main {
     padding: 0.5rem 1.3rem;
 
     font-size: 16px;
 }
 
-.main-header{
+.main-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    margin-block:2.5rem 1.5rem;
+    margin-block: 2.5rem 1.5rem;
 }
 
-.date-selector{
+.date-selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     border: 1px solid lightgray;
     border-radius: 5px;
 
     padding: 5px 10px;
+
+    max-width: 200px;
 }
 
-#datepicker{
+#datepicker {
+    width: 100%;
     border: none;
     outline: none;
-    
+
     cursor: pointer;
 }
 
-.fa-calendar{
+.fa-calendar {
     color: gray;
 }
 
-.performance-container{
+.performance-container {
     max-width: 750px;
 
     margin-bottom: 1.3rem;
 }
 
-.performance-wrapper{
+.performance-wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(230px,100%), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(230px, 100%), 1fr));
     gap: 1rem;
 }
 
-.performance-data-container{
+.performance-data-container {
     padding: 1rem;
 
     border: 1px solid lightgray;
@@ -50,34 +57,34 @@ main{
     background-color: #EFFDF4;
 }
 
-.performance-data-container > p{
+.performance-data-container>p {
     font-weight: bold;
 
     margin-bottom: 2rem;
 }
 
-.performance-data{
+.performance-data {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.performance-data > p{
+.performance-data>p {
     font-size: 24px;
     font-weight: 600;
 }
 
-.performance-sign{
+.performance-sign {
     font-size: 14px;
     color: #42925B;
 }
 
-.linechart-container{
+.linechart-container {
     max-width: 1070px;
     height: auto;
 
     padding: 2rem 1rem;
-    
+
     border: 1px solid lightgray;
     border-radius: 15px;
 }

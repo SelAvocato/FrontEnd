@@ -1,17 +1,80 @@
 @media (max-width: 768px) {
   body {
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: auto 1fr 1fr;
   }
 
   aside {
-    display: none;
+    transform: translateX(-260px);
+    transition: all 0.3s ease;
+  }
+
+  .show {
+    transform: translateX(0);
+  }
+
+  .x {
+    display: block;
   }
 
   .hamburger-menu {
     display: block;
   }
 
-  main, .components {
+  main,
+  .components {
     width: 100vw;
+  }
+}
+
+@media (max-width: 500px){
+  .searchbox input{
+    display: none;
+  }
+  .searchbox{
+    border: none;
+  }
+  .main-header{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px,100%), 1fr));
+    gap: 1rem;
+  }
+
+  .recent-sales-table th{
+    display: none;
+  }
+
+  .recent-sales-table td{
+    padding: 0.5rem 1rem;
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: 15ch auto;
+    border: none;
+  }
+
+  .recent-sales-table td:nth-child(2){
+    grid-template-columns: 15ch 1ch auto;
+  }
+
+  .recent-sales-table td:last-child{
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgb(139, 139, 139);
+  }
+  .recent-sales-table td::before{
+    font-weight: 600;
+  }
+  .recent-sales-table td:first-child::before{
+    content: 'DATE SOLD: ';
+  }
+  .recent-sales-table td:nth-child(2)::before{
+    content: 'PRODUCT: ';
+  }
+  .recent-sales-table td:nth-child(3)::before{
+    content: 'CUSTOMER: ';
+  }
+  .recent-sales-table td:nth-child(4)::before{
+    content: 'PRICE: ';
+  }
+  .recent-sales-table td:nth-child(5)::before{
+    content: 'EARNING: ';
   }
 }

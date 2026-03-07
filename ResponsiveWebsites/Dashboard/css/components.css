@@ -37,6 +37,7 @@
 th,
 td {
     text-align: start;
+    padding-block: 0.5rem;
 }
 
 th {
@@ -61,7 +62,6 @@ td {
 .traffic-data-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100px, 100%), 1fr));
-
     gap: 2rem;
 }
 
