@@ -11,13 +11,7 @@
     display: block;
   }
 
-  main {
+  main, .components {
     width: 100vw;
   }
-
-  .components {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
-  }
-
 }
