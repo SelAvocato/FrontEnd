@@ -3,6 +3,12 @@
     grid-template-columns: auto 1fr 1fr;
   }
 
+  header {
+    position: sticky;
+    top: 0;
+    background-color: #F8FAFC;
+  }
+
   aside {
     transform: translateX(-260px);
     transition: all 0.3s ease;
@@ -26,55 +32,77 @@
   }
 }
 
-@media (max-width: 500px){
-  .searchbox input{
-    display: none;
-  }
-  .searchbox{
+@media (max-width: 500px) {
+  .searchbox {
+    position: relative;
     border: none;
   }
-  .main-header{
+
+  .searchbox input {
+    display: none;
+    position: absolute;
+    bottom: -30px;
+    right: 0;
+
+    width: 140px;
+    padding: 0.5rem;
+
+    border-radius: 10px;
+    border: 1px solid lightgray;
+  }
+
+  .searchbox input.showSearchboxInput {
+    display: block;
+  }
+
+  .main-header {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(300px,100%), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
     gap: 1rem;
   }
 
-  .recent-sales-table th{
+  .recent-sales-table th {
     display: none;
   }
 
-  .recent-sales-table td{
+  .recent-sales-table td {
     padding: 0.5rem 1rem;
     display: grid;
-    gap: 0.5rem;
-    grid-template-columns: 15ch auto;
+    gap: 0.4rem;
+    grid-template-columns: 10ch auto;
     border: none;
   }
 
-  .recent-sales-table td:nth-child(2){
-    grid-template-columns: 15ch 1ch auto;
+  .recent-sales-table td:nth-child(2) {
+    grid-template-columns: 10ch 1ch auto;
   }
 
-  .recent-sales-table td:last-child{
+  .recent-sales-table td:last-child {
     margin-bottom: 1rem;
     border-bottom: 1px solid rgb(139, 139, 139);
   }
-  .recent-sales-table td::before{
+
+  .recent-sales-table td::before {
     font-weight: 600;
   }
-  .recent-sales-table td:first-child::before{
+
+  .recent-sales-table td:first-child::before {
     content: 'DATE SOLD: ';
   }
-  .recent-sales-table td:nth-child(2)::before{
+
+  .recent-sales-table td:nth-child(2)::before {
     content: 'PRODUCT: ';
   }
-  .recent-sales-table td:nth-child(3)::before{
+
+  .recent-sales-table td:nth-child(3)::before {
     content: 'CUSTOMER: ';
   }
-  .recent-sales-table td:nth-child(4)::before{
+
+  .recent-sales-table td:nth-child(4)::before {
     content: 'PRICE: ';
   }
-  .recent-sales-table td:nth-child(5)::before{
+
+  .recent-sales-table td:nth-child(5)::before {
     content: 'EARNING: ';
   }
 }

@@ -8,30 +8,32 @@ header {
     border-bottom: 1px solid lightgray;
 }
 
-.header-title{
+.header-title {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1rem;
 }
 
-.hamburger-menu{
+.hamburger-menu {
     display: none;
     cursor: pointer;
 }
 
-.line{
+.line {
     height: 3px;
     width: 18px;
 
     background-color: rgb(136, 134, 134);
 }
 
-.line:nth-child(2){
+.line:nth-child(2) {
     margin-block: 3px;
 }
 
-.span-dashboard, .searchbox i, .fa-bell {
+.span-dashboard,
+.searchbox i,
+.fa-bell {
     color: gray;
 }
 
@@ -55,17 +57,22 @@ header {
 }
 
 .searchbox input {
+    display: block;
     outline: none;
     border: none;
 }
 
-.notif-bell{
+.notification {
+    position: relative;
+}
+
+.notif-bell {
     position: relative;
 
     cursor: pointer;
 }
 
-.red-dot{
+.red-dot {
     position: absolute;
     top: 0;
     right: -3px;
@@ -76,4 +83,32 @@ header {
     border-radius: 50%;
 
     background-color: #FE2712;
+}
+
+.notification-container {
+    position: absolute;
+    right: 0;
+    bottom: -60px;
+
+    text-align: center;
+
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+
+    width: 300px;
+
+    background-color: rgba(223, 221, 221, 0.418);
+}
+
+.empty-notification{
+    font-size: 15px;
+}
+
+.notification-container.hidden{
+    display: none;
+}
+
+.notification-container.show{
+    display: block;
 }

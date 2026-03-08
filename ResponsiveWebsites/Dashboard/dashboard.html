@@ -36,12 +36,17 @@
         </div>
         <div class="header-actions">
             <div class="searchbox">
-                <input type="text" placeholder="Search anything ...">
-                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="search-input" placeholder="Search anything ...">
+                <i class="fa-solid fa-magnifying-glass" id="searchIcon"></i>
             </div>
-            <div class="notif-bell">
-                <i class="fa-solid fa-bell"></i>
-                <div class="red-dot"></div>
+            <div class="notification">
+                <div class="notif-bell">
+                    <i class="fa-solid fa-bell"></i>
+                    <div class="red-dot"></div>
+                </div>
+                <div class="notification-container hidden">
+                    <p class="empty-notification">No new notifications.</p>
+                </div>
             </div>
         </div>
     </header>
@@ -59,11 +64,19 @@
                 </div>
                 <i class="fa-solid fa-angle-up" id="dropdown-icon"></i>
             </div>
-            <ul id="dropdown-items">
-                <li class="active">Overview</li>
-                <li>Sales</li>
-                <li>Products</li>
-                <li>Traffic</li>
+            <ul id="dropdown-list">
+                <a href="#overview">
+                    <li class="active">Overview</li>
+                </a>
+                <a href="#sales">
+                    <li>Sales</li>
+                </a>
+                <a href="#product">
+                    <li>Products</li>
+                </a>
+                <a href="#traffic">
+                    <li>Traffic</li>
+                </a>
             </ul>
         </div>
         <div class="profile-container">
@@ -76,7 +89,7 @@
             </div>
         </div>
     </aside>
-    <main>
+    <main id="overview">
         <div class="main-header">
             <div class="greeting">
                 <p><strong>Hey Adam!</strong> It's great to see you again.</p>
@@ -120,12 +133,12 @@
                 </div>
             </div>
         </div>
-        <div class="linechart-container">
+        <div class="linechart-container" id="sales">
             <canvas id="lineChart"></canvas>
         </div>
     </main>
     <section class="components">
-        <div class="recent-sales-container">
+        <div class="recent-sales-container" id="product">
             <p class="recent-sales-header">Recent Sales</p>
             <div class="table-container">
                 <table class="recent-sales-table">
@@ -181,7 +194,7 @@
                 </table>
             </div>
         </div>
-        <div class="traffic-by-country-container">
+        <div class="traffic-by-country-container" id="traffic">
             <p class="traffic-header">Traffic by country</p>
             <div class="traffic-data-container">
                 <div class="donutchart-container">
