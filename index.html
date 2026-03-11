@@ -4,42 +4,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FrontEnd Practices</title>
+    <title>Frontend Challenges</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./index.css">
 </head>
 
 <body>
+    <header>
+        <p class="header-title">Braylle Soberano</p>
+        <nav>
+            <a href="#easy">Easy</a>
+            <a href="#medium">Medium</a>
+            <a href="#hard">Hard</a>
+            <a href="#pro">Pro</a>
+        </nav>
+    </header>
     <main>
-        <h1>FrontEnd Practices</h1>
-        <div class="challenges-container">
-            <h2>Challenges</h2>
-            <div class="challenges-wrapper">
-                <div class="weekly-container">
-                    <p class="weekly-header">Weekly</p>
-                    <div class="weekly-wrapper">
-                        <a href="./Challenges/Weekly/PasswordField/PasswordField.html" target="_blank"
-                            rel="noopener">Password Field</a>
+        <div class="main-text-container">
+            <p class="main-title">My Collection of Challenges</p>
+            <p class="main-subtitle">I made this page to showcase the collection of html, css, and javascript projects
+                I've
+                made. From easy to hard, and even pro-challenges.</p>
+            <p class="main-comment">You can click the cards to view the project.</p>
+        </div>
+        <div class="fav-container">
+            <p class="fav-title">My Favorites</p>
+            <div class="fav card">
+                <a href="./Challenges/Daily/UsersCard/userscard.html" target="_blank">
+                    <div class="img-container">
+                        <img src="./images/cat-circle-preview.png" alt="preview of Cats Circle">
                     </div>
-                </div>
-                <div class="daily-container">
-                    <p class="daily-header">Daily</p>
-                    <div class="daily-wrapper">
-                        <a href="./Challenges/Daily/MusicPlayer/music-player.html" target="_blank" rel="noopener">Music
-                            Player</a>
-                        <a href="./Challenges/Daily/SearchBar/searchbar.html" target="_blank"
-                            rel="noopener">Searchbar</a>
-                        <a href="./Challenges/Daily/UsersCard/userscard.html" target="_blank" rel="noopener">Users
-                            Card</a>
-                    </div>
-                </div>
+                    <p class="card-title">Cats Circle</p>
+                </a>
             </div>
         </div>
     </main>
-
-    <section class="responsive-practices-container">
-        <h2>Responsive Websites</h2>
-        <div class="respract-wrapper">
-            <a href="./ResponsiveWebsites/Dashboard/dashboard.html" target="_blank">dashboard</a>
+    <section id="easy">
+        <p class="easy-title">Easy Challenges</p>
+        <div class="easy-container">
+            <div class="card-wrapper">
+                <div class="easy card">
+                    <a href="./Challenges/Daily/SearchBar/searchbar.html" target="_blank">
+                        <div class="img-container">
+                            <img src="./images/searchbar-preview.png" alt="preview of searchbar">
+                        </div>
+                        <p class="card-title">Searchbar</p>
+                    </a>
+                </div>
+                <div class="easy card">
+                    <a href="./Challenges/Daily/UserCard2/usercard.html" target="_blank">
+                        <div class="img-container">
+                            <img src="./images/Usercard2-preview.png" alt="preview of User Card">
+                        </div>
+                        <p class="card-title">User Card</p>
+                    </a>
+                </div>
+                <div class="easy card">
+                    <a href="./Challenges/Daily/PricingTable/pricing-table.html" target="_blank">
+                        <div class="img-container">
+                            <img src="./images/pricing-table-preview.png" alt="preview of Pricing Table">
+                        </div>
+                        <p class="card-title">Pricing Table</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="medium">
+        <p class="medium-title">Medium Difficulty Challenges</p>
+        <div class="medium-container">
+            <div class="card-wrapper">
+                <div class="medium card">
+                    <a href="./Challenges/Daily/ColorPaletteGenerator/color-palette-generator.html" target="_blank">
+                        <div class="img-container">
+                            <img src="./images/color-palette-generator-preview.png"
+                                alt="preview of Color Palette Generator">
+                        </div>
+                        <p class="card-title">Color Palette Generator</p>
+                    </a>
+                </div>
+                <div class="medium card">
+                    <a href="./Challenges/Daily/Kanban/kanban.html" target="_blank">
+                        <div class="img-container">
+                            <img src="./images/kanban-preview.png" alt="preview of Kanban">
+                        </div>
+                        <p class="card-title">Kanban</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="hard">
+        <p class="hard-title">Hard Challenges</p>
+        <div class="hard-container">
+            <div class="card-wrapper">
+                <div class="hard card">
+                    <a href="./Challenges/Daily/MusicPlayer/music-player.html" target="_blank">
+                        <div class="img-container">
+                            <img src="./images/music-player-preview.png" alt="preview of Music Player">
+                        </div>
+                        <p class="card-title">Music Player</p>
+                    </a>
+                </div>
+                <div class="hard card">
+                    <a href="./Challenges/Weekly/PasswordField/PasswordField.html" target="_blank">
+                        <div class="img-container">
+                            <img src="./images/password-preview.png" alt="preview of Password Field">
+                        </div>
+                        <p class="card-title">Password Field</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="pro">
+        <p class="pro-title">Professional Challenges</p>
+        <div class="hard-container">
+            <div class="card-wrapper">
+                <div class="hard card">
+                    <a href="./Challenges/Pro-Challenges/Dashboard/dashboard.html" target="_blank">
+                        <div class="img-container">
+                            <img src="./images/dashboard-preview.png" alt="preview of Dashboard">
+                        </div>
+                        <p class="card-title">Dashboard</p>
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 </body>

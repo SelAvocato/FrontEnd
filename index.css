@@ -1,58 +1,223 @@
-*{
+:root {
+    --text-color: hsl(240, 78%, 9%);
+}
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-body{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: lightblue;
-    padding: 2rem;
-    font-family: sans-serif;
+html {
+    scroll-padding-top: 50px;
+    scroll-behavior: smooth;
 }
 
-main{
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
 
-    height: 90vh;
-    width: 70vw;
-    
-    background-color: white;
-    border-radius: 15px;
-    margin-bottom: 1rem;
+img,
+svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.25s ease;
 }
 
-h1{
-    margin-block: 2rem;
-    letter-spacing: 1px;
+a {
+    text-decoration: none;
+    color: var(--text-color);
+
+    transition: all 0.25s ease;
 }
 
-.challenges-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    width: 50vw;
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
 }
 
-h2{
-    margin-bottom: 1rem;
-}
-
-.challenges-wrapper{
+header {
     display: flex;
     justify-content: space-between;
-    width: 50vw;
-    text-align: center;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+
+    background-color: white;
+
+    padding: 1rem 2rem;
+
+    border-bottom: 1px solid lightgray;
+
+    z-index: 2;
 }
 
-.weekly-header, .daily-header{
-    font-weight: bold;
+.header-title {
+    font-size: 20px;
+    font-weight: 600;
+
+    color: rgb(41, 41, 150);
+}
+
+nav a {
+    position: relative;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+
+nav a:hover {
+    transform: scale(1.05);
+
+    font-weight: 600;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    height: 1px;
+    width: 0%;
+    background-color: black;
+    transition: all 0.25s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+main,
+section {
+    padding: 2rem 10rem;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+
+    background-color: #bad7f244;
+    min-height: 70vh;
+    padding-bottom: 5rem;
+}
+
+.main-title {
+    font-size: 24px;
+    font-weight: 600;
+
+    margin-bottom: 1rem;
+}
+
+.main-subtitle {
+    width: 500px;
+}
+
+.main-comment {
+    font-size: 14px;
+    margin-top: 1rem;
+    color: gray;
+}
+
+.fav-container {
+    margin-inline: auto;
+}
+
+.fav-title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+
+    margin-bottom: 1rem;
+}
+
+.fav.card {
+    width: 300px;
+    height: 200px;
+}
+
+#easy {
+    background-color: #f2bac962;
+    
+    padding-block: 5rem;
+}
+
+#medium {
+    background-color: #f2e2ba98;
+    padding-block: 5rem;
+}
+
+#hard {
+    background-color: #b0f2b494;
+    padding-block: 5rem;
+}
+
+#pro {
+    background-color: #BAF2E9;
+    padding-block: 5rem;
+}
+
+.card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
+    column-gap: 2rem;
+    row-gap: 3rem;
+}
+
+.card {
+    text-align: center;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    height: 100%;
+
+    background-color: white;
+    
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+    transition: all 0.5s ease;
+}
+
+.card:hover {
+    box-shadow: 0px 7px 20px hsla(0, 0%, 0%, 0.2);
+    transform: translateY(-10px);
+
+    border: 5px solid rgba(88, 87, 87, 0.384);
+}
+
+.card:hover .card-title{
+    transform: scale(1.1);
+}
+
+.img-container {
+    width: 100%;
+    overflow: hidden;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.img-container:hover img {
+    transform: scale(1.1);
+}
+
+.card-title {
+    margin-block: 1rem;
+
     font-size: 15px;
+    font-weight: 600;
+
+    transition: all 0.25s ease;
+}
+
+.easy-title,
+.medium-title,
+.hard-title,
+.pro-title {
+    font-size: 22px;
+    font-weight: 600;
+
+    margin-bottom: 1.5rem;
 }
